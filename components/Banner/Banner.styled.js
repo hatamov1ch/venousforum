@@ -19,7 +19,7 @@ const StyledBanner = styled.section`
 `;
 
 export const Content = styled.div`
-  padding: 7.5em 0 0;
+  padding: 7.5em 0 5em;
   position: relative;
   z-index: 2;
 `;
@@ -43,6 +43,7 @@ export const Title = styled.h1`
   font-size: 5.5rem;
   line-height: 1.25;
   margin-bottom: 1em;
+  color: ${({ theme }) => theme.color.dark};
 `;
 
 export const List = styled.ul`
@@ -58,6 +59,7 @@ export const List = styled.ul`
       font-weight: 700;
       line-height: 1.5;
       text-align: center;
+      color: ${({ theme }) => theme.color.dark};
     }
 
     p {
