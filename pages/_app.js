@@ -1,6 +1,7 @@
 import Head from "next/head";
 import GlobalStyle from "../styles/global.styled";
 import { ThemeProvider } from "styled-components";
+import Script from "next/script";
 
 const theme = {
   containerWidth: "1400px",

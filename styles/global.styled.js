@@ -43,6 +43,10 @@ const GlobalStyle = createGlobalStyle`
 	a,button,[role='button'] {
 		cursor: pointer;
 	}
+	
+	h2 {
+		font-size: 4.5rem;
+	}
 `;
 
 export default GlobalStyle;
