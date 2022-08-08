@@ -17,11 +17,12 @@ export const LoaderBtn = styled.button`
   width: 100%;
   text-align: center;
   border: 0;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
   background: transparent;
   font-weight: 700;
-  color: ${({ theme }) => theme.background.primary};
-  font-size: 5rem;
+  color: ${({ theme }) => theme.color.dark};
+  font-size: 2rem;
   transition: 500ms ease-in-out;
 
   &:hover {
