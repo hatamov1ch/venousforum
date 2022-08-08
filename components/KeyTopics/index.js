@@ -7,6 +7,10 @@ import StyledKeyTopics, {
 } from "./KeyTopics.styled";
 import Topic from "./Topic";
 
+//React icons
+import { MdOutlineExpandLess } from "react-icons/md";
+import { MdOutlineExpandMore } from "react-icons/md";
+
 const KeyTopics = ({ topics }) => {
   const [itemsToShow, setItemsToShow] = useState(2);
 
@@ -31,9 +35,11 @@ const KeyTopics = ({ topics }) => {
           </TopicsContainer>
 
           <LoaderBtn onClick={handleLoadAll}>
-            {itemsToShow >= topics.length
-              ? "Показать меньше..."
-              : "Показать больше..."}
+            {itemsToShow >= topics.length ? (
+              <MdOutlineExpandLess />
+            ) : (
+              <MdOutlineExpandMore />
+            )}
           </LoaderBtn>
         </Content>
       </div>
