@@ -4,12 +4,12 @@ const Speaker = styled.div`
   text-align: center;
 
   img {
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+	  height: 20rem;
     object-fit: cover;
-    object-position: 0 -2rem;
+    object-position: center top;
     border-radius: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 	  box-shadow: 0 5px 10px rgba(55, 55, 55, .15);
 `;
 

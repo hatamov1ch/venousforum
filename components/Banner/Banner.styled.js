@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledBanner = styled.section`
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";

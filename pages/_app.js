@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <Head>
         <title>Форум флебологов в Ташкенте | Главная страница</title>
-        {/*Google Fonts API*/}
       </Head>
       <GlobalStyle />
       <Component {...pageProps} />

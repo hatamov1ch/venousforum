@@ -9,22 +9,25 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
-const Speaker = ({ profilePhoto, fullName, about, contacts }) => {
+const Speaker = ({ speaker }) => {
   return (
     <StyledSpeaker id={"speaker"}>
-      <img src={profilePhoto} alt={fullName} />
+      <img src={speaker.profile.photoURL} alt={speaker.first_name} />
 
-      <FullName>{fullName}</FullName>
+      <FullName>
+        {speaker.profile.first_name} {speaker.profile.last_name}
+      </FullName>
+
       <Contacts>
-        <h4>{contacts.origin}</h4>
+        <h4>{speaker.contacts.location}</h4>
         <SocialNetworks>
-          <a href={contacts.socialNetworks.facebook}>
+          <a href={speaker.contacts.socialNetworks.facebook}>
             <FaFacebook />
           </a>
-          <a href={contacts.socialNetworks.twitter}>
+          <a href={speaker.contacts.socialNetworks.twitter}>
             <FaTwitter />
           </a>
-          <a href={contacts.socialNetworks.instagram}>
+          <a href={speaker.contacts.socialNetworks.instagram}>
             <FaInstagram />
           </a>
         </SocialNetworks>
