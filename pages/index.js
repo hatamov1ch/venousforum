@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Welcome from "../components/Welcome";
 import Speakers from "../components/Speaker";
+import KeyTopics from "../components/KeyTopics";
 
 //Fake backend
 import speakers from "../database/speakers";
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Banner />
       <Welcome />
       <Speakers speakers={speakers} />
+      <KeyTopics topics={[]} />
     </Fragment>
   );
 };
