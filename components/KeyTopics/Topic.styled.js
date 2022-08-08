@@ -4,6 +4,21 @@ const StyledTopic = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 5em;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2em;
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  &:nth-child(even) {
+    img {
+      order: -1;
+    }
+  }
 
   &:hover img {
     filter: none;
@@ -17,9 +32,7 @@ const StyledTopic = styled.article`
 `;
 
 export const Main = styled.div`
-  width: 50%;
-  padding-right: 5rem;
-  border-right: 1px solid #ccc;
+  width: 46.5%;
 `;
 
 export const Title = styled.h3`

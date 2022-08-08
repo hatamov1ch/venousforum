@@ -7,6 +7,7 @@ import KeyTopics from "../components/KeyTopics";
 
 //Fake backend
 import speakers from "../database/speakers";
+import topics from "../database/topics";
 
 const HomePage = () => {
   return (
@@ -15,7 +16,7 @@ const HomePage = () => {
       <Banner />
       <Welcome />
       <Speakers speakers={speakers} />
-      <KeyTopics topics={[]} />
+      <KeyTopics topics={topics} />
     </Fragment>
   );
 };
