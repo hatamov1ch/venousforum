@@ -1,5 +1,6 @@
 import StyledTopic, { Main, Title, Text } from "./Topic.styled";
 import Image from "next/image";
+import uuid from "react-uuid";
 
 const Topic = ({ title, description, imageURL }) => {
   return (
@@ -8,7 +9,7 @@ const Topic = ({ title, description, imageURL }) => {
         <Title>{title}</Title>
 
         {description.map((content, index) => (
-          <Text key={`topic-paragraph-${index}`}>{content}</Text>
+          <Text key={uuid()}>{content}</Text>
         ))}
       </Main>
 
