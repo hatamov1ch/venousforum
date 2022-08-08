@@ -3,14 +3,19 @@ import styled from "styled-components";
 const Speaker = styled.div`
   text-align: center;
 
-  img {
+  .image-wrapper {
     width: 20rem;
-	  height: 20rem;
-    object-fit: cover;
-    object-position: center top;
+    height: 20rem;
+    margin: 0 auto 1.5em;
     border-radius: 100%;
-    margin-bottom: 1.5em;
-	  box-shadow: 0 5px 10px rgba(55, 55, 55, .15);
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(55, 55, 55, 0.15);
+
+    img {
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
 `;
 
 export const FullName = styled.h3`

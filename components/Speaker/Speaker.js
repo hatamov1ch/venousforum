@@ -8,11 +8,20 @@ import StyledSpeaker, {
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const Speaker = ({ speaker }) => {
   return (
     <StyledSpeaker id={"speaker"}>
-      <img src={speaker.profile.photoURL} alt={speaker.first_name} />
+      <div className="image-wrapper">
+        <Image
+          width={100}
+          height={100}
+          src={speaker.profile.photoURL}
+          alt={speaker.first_name}
+          layout={"responsive"}
+        />
+      </div>
 
       <FullName>
         {speaker.profile.first_name} {speaker.profile.last_name}
