@@ -1,4 +1,5 @@
 import StyledTopic, { Main, Title, Text } from "./Topic.styled";
+import Image from "next/image";
 
 const Topic = ({ title, description, imageURL }) => {
   return (
@@ -6,12 +7,20 @@ const Topic = ({ title, description, imageURL }) => {
       <Main>
         <Title>{title}</Title>
 
-        {description.map((content) => (
-          <Text>{content}</Text>
+        {description.map((content, index) => (
+          <Text key={`topic-paragraph-${index}`}>{content}</Text>
         ))}
       </Main>
 
-      <img src={imageURL} alt="Вектор" />
+      <div className="image-wrapper">
+        <Image
+          width={1000}
+          height={1000}
+          layout={"responsive"}
+          src={imageURL}
+          alt="Вектор"
+        />
+      </div>
     </StyledTopic>
   );
 };

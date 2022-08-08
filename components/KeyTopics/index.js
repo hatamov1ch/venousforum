@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import StyledKeyTopics, {
   Content,
   TopicsContainer,
@@ -6,10 +6,6 @@ import StyledKeyTopics, {
   LoaderBtn,
 } from "./KeyTopics.styled";
 import Topic from "./Topic";
-
-//React icons
-import { MdOutlineExpandLess } from "react-icons/md";
-import { MdOutlineExpandMore } from "react-icons/md";
 
 const KeyTopics = ({ topics }) => {
   const [itemsToShow, setItemsToShow] = useState(2);
@@ -29,17 +25,15 @@ const KeyTopics = ({ topics }) => {
           <Title>Ключевые темы форума</Title>
 
           <TopicsContainer>
-            {topics.slice(0, itemsToShow).map((topic) => (
-              <Topic key={topic.title.replace(" ", "-")} {...topic} />
+            {topics.slice(0, itemsToShow).map((topic, index) => (
+              <Topic key={index} {...topic} />
             ))}
           </TopicsContainer>
 
           <LoaderBtn onClick={handleLoadAll}>
-            {itemsToShow >= topics.length ? (
-              <MdOutlineExpandLess />
-            ) : (
-              <MdOutlineExpandMore />
-            )}
+            {itemsToShow >= topics.length
+              ? "Показать меньше"
+              : "Показать больше..."}
           </LoaderBtn>
         </Content>
       </div>

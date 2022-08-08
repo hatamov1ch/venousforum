@@ -4,7 +4,7 @@ const StyledTopic = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 5em;
+  padding-bottom: 1em;
   border-bottom: 1px solid #ccc;
   margin-bottom: 2em;
 
@@ -15,7 +15,7 @@ const StyledTopic = styled.article`
   }
 
   &:nth-child(even) {
-    img {
+    .image-wrapper {
       order: -1;
     }
   }
@@ -26,8 +26,13 @@ const StyledTopic = styled.article`
 
   img {
     width: 50%;
+    object-fit: contain;
     filter: grayscale(100%);
     transition: 500ms ease-in-out;
+  }
+
+  .image-wrapper {
+    width: 50%;
   }
 `;
 
